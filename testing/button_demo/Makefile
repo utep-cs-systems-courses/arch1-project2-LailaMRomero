@@ -14,7 +14,7 @@ all: button.elf buzzer.elf
 button.elf: ${COMMON_OBJECTS} p1_interrupt_handler.o led.o switches.o buttonMain.o ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
-buzzer.elf:  ${COMMON_OBJECTS} buzzer.o buzzerMain.o ../lib/libTimer.a
+buzzer.elf:  ${COMMON_OBJECTS} buzzer.o interrupts.o switches.o buzzerMain.o ../lib/libTimer.a
 
 	${CC} ${CFLAGS} -o $@ $^
 
