@@ -1,4 +1,4 @@
-#Blinky Buzzy Toy Lab 2
+# Blinky Buzzy Toy Lab 2 
 
 The purpose of this lab was to understand how to work on the msp430 and how to
 get the leds, switches and buzzer to work together. For this lab we were to
