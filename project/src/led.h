@@ -2,8 +2,6 @@
 
 #define  led_included
 
-
-
 #include <msp430.h>
 
 
@@ -20,12 +18,13 @@ void led_init();/* initialize LEDs */
 
 void led_update();/* update leds */
 
-
+void toggle_red();
+void toggle_green();
 
 // these are boolean flags
 
 extern unsigned char leds_changed, green_led_state, red_led_state;
-
+char red_on, green_on;
 
 
 #endif
