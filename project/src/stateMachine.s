@@ -1,4 +1,4 @@
-	.arch msp430g2553
+.arch msp430g2553
 			.data
 switch_state_changed:
 			.byte
