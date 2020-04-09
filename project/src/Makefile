@@ -9,10 +9,10 @@ CFLAGS          = -mmcu=${CPU} -I../h -L/opt/ti/msp430_gcc/include
 CC              = msp430-elf-gcc
 AS              = msp430-elf-as
 
-all: project.elf
+all: project2.elf
 
 #additional rules for files
-project2.elf: ${COMMON_OBJECTS} main.o stateMachine.o buzzer.o interrupts.o led.o switches.o  ../lib/libTimer.a
+project2.elf: ${COMMON_OBJECTS} main.o stateMachine.s buzzer.o interrupts.o led.o switches.o  ../lib/libTimer.a
 
 	${CC} ${CFLAGS} -o $@ $^
 
@@ -27,7 +27,7 @@ clean:
 main.c: buzzer.h switches.h
 buzzer.c: buzzer.h
 switches.c: switches.h buzzer.h led.h
-stateMachine.c: stateMachine.h led.h switches.h
+stateMachine.s: stateMachine.h led.h switches.h
 interrupts.c: switches.h led.h stateMachine.h buzzer.h
 led.c: led.h stateMachine.h
 
