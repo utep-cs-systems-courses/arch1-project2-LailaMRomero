@@ -1,4 +1,5 @@
 	.arch msp430g2553
+	.p2align 1,0
 			.data
 switch_state_changed:
 			.byte
@@ -19,7 +20,7 @@ state_advance:
 	mov jt(r12), r0
 
 case1:
-	call toggle_red
+	call #toggle_red
 	jmp end
 
 case2:
